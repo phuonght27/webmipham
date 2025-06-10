@@ -502,10 +502,10 @@
     <!-- custom js file link -->
     <script src="{% static 'customers/js/script.js' %}"></script>
 <script>
-window.onclick = function(event) {
-    const form = document.querySelector('#search-form');
-    const icon = document.querySelector('#search-icon');
-
+window.onclick = function toggleSearchBar() {
+        const form = document.getElementById('search-form');
+        form.style.display = form.style.display === 'none' ? 'inline-block' : 'none';
+    
     if (!form.contains(event.target) && event.target !== icon) {
         form.classList.remove('active');
     }

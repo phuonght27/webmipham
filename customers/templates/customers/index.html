@@ -505,10 +505,7 @@
 window.onclick = function toggleSearchBar() {
         const form = document.getElementById('search-form');
         form.style.display = form.style.display === 'none' ? 'inline-block' : 'none';
-    
-    if (!form.contains(event.target) && event.target !== icon) {
-        form.classList.remove('active');
-    }
+
 }
 </script>
 </body>

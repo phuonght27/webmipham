@@ -1,7 +1,12 @@
+
 services:
   - type: web
-    name: WEBMIPHAM
+    name: webmipham
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn ten_project.wsgi:application
-    autoDeploy: true
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn WEBMIPHAM.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: WEBMIPHAM.settings
+      - key: PYTHON_VERSION
+        value: 3.10

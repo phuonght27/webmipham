@@ -57,8 +57,6 @@
             </div>
 </div>
     <div class="icons">
-        <i class="fas fa-bars" id="menu-bars"></i>
-        <i class="fas fa-search" id="search-icon"></i>
         <a href="{% url 'giohang' %}" class="fas fa-shopping-cart" title="Giỏ hàng"></a>
         <a href="{% url 'yeuthich' %}" class="fas fa-heart"></a>
         {% if user.is_authenticated %}
@@ -77,11 +75,7 @@
 
     <!-- header section ends -->
     <!-- search form -->
-    <form action="" id="search-form">
-        <input type="search" placeholder="Tìm kiếm ở đây..." name="" id="search-box">
-        <label for="search-box" class="fas fa-search"></label>
-        <i class="fas fa-times" id="close"></i>
-    </form>
+
 <style>.order-detail {
     padding: 80px 20px;
     background-color: #fdfdfd;
